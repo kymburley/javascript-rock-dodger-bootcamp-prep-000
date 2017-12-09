@@ -71,7 +71,7 @@ function createRock(x) {
 
     if ( top < 360 ) {
       window.requestAnimationFrame(moveRock);
-    } else { 
+    } else {
       rock.remove()
     }
 
