@@ -50,6 +50,7 @@ function createRock(x) {
   rock.style.left = `${x}px`;
 
   // Hmmm, why would we have used `var` here?
+//var top = 0;
   var top = 360;
 
   rock.style.top = top;
@@ -65,8 +66,9 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    rock.style.top = `${top += 2}px`;
-
+    //rock.style.top = `${top += 2}px`;
+    rock.style.top = `${top - 2}px`;
+    
     if ( top < 360 ) {
       window.requestAnimationFrame(moveRock);
     } else {
