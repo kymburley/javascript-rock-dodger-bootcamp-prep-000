@@ -99,7 +99,7 @@ function endGame() {
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger);
   for ( let i in ROCKS ) {
-    $(ROCKS[i]).remove();
+    $(ROCKS[i]).empty();
   }
   alert("You LOSE!");
 }
