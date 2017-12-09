@@ -72,9 +72,9 @@ function createRock(x) {
     } else {
       rock.remove();
     }
-console.log(checkCollision(rock))
+console.log(checkCollision())
     if ( checkCollision(rock) === true ) {
-      
+
        endGame();
      }
   }
