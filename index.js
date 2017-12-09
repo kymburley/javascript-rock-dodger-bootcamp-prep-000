@@ -113,14 +113,15 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  var left = positionToInteger(DODGER.style.left)+4;
+  
 
   function step() {
+    var left = positionToInteger(DODGER.style.left)+4;
     DODGER.style.left = `${left -= 4}px`;
 
-    if ( left > 0 ) {
+  /*  if ( left > 0 ) {
        window.requestAnimationFrame(step);
-     }
+     }*/
    }
 
    window.requestAnimationFrame(step);
