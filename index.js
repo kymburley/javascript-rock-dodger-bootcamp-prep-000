@@ -70,7 +70,7 @@ function createRock(x) {
     rock.style.top = `${top += 2}px`;
 
     if ( top < 360 ) {
-       window.requestAnimationFrame(step);
+       window.requestAnimationFrame(moveRock);
      }
 
     if ( checkCollision(rock) === true ) {
@@ -83,7 +83,7 @@ function createRock(x) {
        }
      }
   }
-
+  window.requestAnimationFrame(moveRock);
 //  moveRock();
   ROCKS.push(rock);
 
