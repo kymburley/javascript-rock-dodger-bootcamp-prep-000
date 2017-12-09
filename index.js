@@ -84,7 +84,7 @@ function createRock(x) {
      }
   }
   window.requestAnimationFrame(moveRock);
-//  moveRock();
+  moveRock();
   ROCKS.push(rock);
 
   return rock;
