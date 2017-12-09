@@ -75,9 +75,9 @@ function createRock(x) {
 
     if ( checkCollision(rock) === true ) {
        endGame();
-     } 
+     }
   }
-  
+
   window.requestAnimationFrame(moveRock);
 
   ROCKS.push(rock);
@@ -111,32 +111,24 @@ function moveDodger(e) {
 function moveDodgerLeft() {
   function step() {
     var left = positionToInteger(DODGER.style.left);
+
     if( left > 0 ) {
       DODGER.style.left = `${left - 4}px`;
-    } 
-
-  /*  if ( left > 0 ) {
-       window.requestAnimationFrame(step);
-     }*/
-   }
-
-   window.requestAnimationFrame(step);
+    }
+  }
+  window.requestAnimationFrame(step);
 }
 
 function moveDodgerRight() {
   console.log(DODGER.style.left)
-
-  var left = positionToInteger(DODGER.style.left)-4;
-
   function step() {
-    DODGER.style.left = `${left += 4}px`;
+    var left = positionToInteger(DODGER.style.left);
 
     if ( left < 360 ) {
-       window.requestAnimationFrame(step);
-     }
-   }
-
-   window.requestAnimationFrame(step);
+      DODGER.style.left = `${left + 4}px`;
+    }
+  }
+  window.requestAnimationFrame(step);
 }
 
 /**
