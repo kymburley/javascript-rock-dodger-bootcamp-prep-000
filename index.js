@@ -113,7 +113,7 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  
+
 
   function step() {
     var left = positionToInteger(DODGER.style.left)+4;
