@@ -74,6 +74,7 @@ function createRock(x) {
     }
 
     if ( checkCollision(rock) === true ) {
+      console.log("before endGame in checkCollision")
        endGame();
      }
   }
