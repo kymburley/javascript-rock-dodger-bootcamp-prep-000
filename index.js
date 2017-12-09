@@ -67,16 +67,11 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    /*
-    function step() {
-      rock.style.top = `${top += 2}px`;
+    rock.style.top = `${top += 2}px`;
 
-      if ( top < 360 ) {
-         window.requestAnimationFrame(step);
-       }
+    if ( top < 360 ) {
+       window.requestAnimationFrame(step);
      }
-
-     window.requestAnimationFrame(step);
 
     if ( checkCollision(rock) === true ) {
        endGame();
@@ -86,7 +81,7 @@ function createRock(x) {
        } else {
         $(GAME).detach(rock);
        }
-     }*/
+     }
   }
 
 //  moveRock();
