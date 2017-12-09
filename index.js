@@ -96,9 +96,10 @@ function endGame() {
 
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger);
-  for ( let i in ROCKS ) {
-    ROCKS.splice(i, 1);
-  }
+  ROCKS.forEach(function(rock) {
+    rock.remove()
+  })
+  
   alert("You LOSE!");
 }
 
