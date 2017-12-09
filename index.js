@@ -19,7 +19,7 @@ var gameInterval = null
 
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top);
-
+console.log(top)
   // rocks are 20px high
   // DODGER is 20px high
   // GAME_HEIGHT - 20 - 20 = 360px;
@@ -90,8 +90,8 @@ function endGame() {
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger);
   ROCKS.forEach(function(rock) {
-    rock.remove()
-  })
+    rock.remove();
+  });
 
   alert("You LOSE!");
 }
@@ -120,7 +120,6 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-  console.log(DODGER.style.left)
   function step() {
     var left = positionToInteger(DODGER.style.left);
 
