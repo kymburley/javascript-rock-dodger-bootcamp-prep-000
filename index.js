@@ -20,7 +20,7 @@ var gameInterval = null
 function checkCollision(rock) {
   // implement me!
   // use the comments below to guide you!
-  const top = positionToInteger(rock.style.top)
+  const top = positionToInteger(rock.style.top);
 
   // rocks are 20px high
   // DODGER is 20px high
@@ -31,7 +31,7 @@ function checkCollision(rock) {
     // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
     const dodgerRightEdge = positionToInteger(DODGER.style.left) + 40;
 
-    const rockLeftEdge = positionToInteger(rock.style.left)
+    const rockLeftEdge = positionToInteger(rock.style.left);
 
     // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge = positionToInteger(rock.style.left) + 20;
@@ -113,7 +113,7 @@ function createRock(x) {
 }
 
 function endGame() {
-  ROCKS.splice(0);
+  body.getElementByClass('rock').remove();
   clearInterval(gameInterval);
   window.removeEventListener('keydown', moveDodger);
 
