@@ -18,8 +18,6 @@ var gameInterval = null
  */
 
 function checkCollision(rock) {
-  // implement me!
-  // use the comments below to guide you!
   const top = positionToInteger(rock.style.top);
 
   // rocks are 20px high
@@ -72,19 +70,14 @@ function createRock(x) {
     if ( top < 360 ) {
       window.requestAnimationFrame(moveRock);
     } else {
-      rock.remove()
+      rock.remove();
     }
 
     if ( checkCollision(rock) === true ) {
        endGame();
-     } /*else {
-      if ( rock.style.top < 360 ) {
-         moveRock();
-       } else {
-        $(GAME).detach(rock);
-      }
-     }*/
+     } 
   }
+  
   window.requestAnimationFrame(moveRock);
 
   ROCKS.push(rock);
@@ -117,9 +110,10 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   function step() {
-    console.log(DODGER.style.left)
     var left = positionToInteger(DODGER.style.left);
-    if(left > 0) DODGER.style.left = `${left - 4}px`;
+    if( left > 0 ) {
+      DODGER.style.left = `${left - 4}px`;
+    } 
 
   /*  if ( left > 0 ) {
        window.requestAnimationFrame(step);
@@ -130,6 +124,7 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
+  console.log(DODGER.style.left)
 
   var left = positionToInteger(DODGER.style.left)-4;
 
