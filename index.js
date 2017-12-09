@@ -114,8 +114,8 @@ function createRock(x) {
 
 function endGame() {
   clearInterval(gameInterval);
-  $(GAME).remove(rock);
   window.removeEventListener('keydown', moveDodger);
+  $(GAME).remove(rock);
   alert("You LOSE!");
 }
 
