@@ -75,16 +75,16 @@ function createRock(x) {
 
     if ( checkCollision(rock) === true ) {
        endGame();
-     } else {
+     } /*else {
       if ( rock.style.top < 360 ) {
          moveRock();
        } else {
         $(GAME).detach(rock);
-       }
-     }
+      }
+     }*/
   }
   window.requestAnimationFrame(moveRock);
-  moveRock();
+
   ROCKS.push(rock);
 
   return rock;
