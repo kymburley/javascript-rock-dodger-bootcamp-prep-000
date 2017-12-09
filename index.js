@@ -19,7 +19,7 @@ var gameInterval = null
 
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top);
-
+console.log(top)
   // rocks are 20px high
   // DODGER is 20px high
   // GAME_HEIGHT - 20 - 20 = 360px;
@@ -72,7 +72,7 @@ function createRock(x) {
     } else {
       rock.remove();
     }
-console.log(checkCollision())
+
     if ( checkCollision(rock) === true ) {
 
        endGame();
